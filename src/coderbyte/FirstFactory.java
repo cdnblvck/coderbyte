@@ -20,9 +20,9 @@ public class FirstFactory {
 	public  int firstfactorial(int n) {
 		int num = 1;
 		if (n < 0)
-			throw new RuntimeException("Underflow error in factorial");
+			throw new RuntimeException("Underflow");
 		else if (n > 20)
-			throw new RuntimeException("Overflow error in factorial");
+			throw new RuntimeException("Overflow");
 		else if (n == 0)
 			return 1;
 		else {
