@@ -13,12 +13,18 @@ public class Testeur {
 		LongestWord lw = new LongestWord();
 		System.out.println(lw.longestWord("fun&!! time"));
 		SimpleAdding sa = new SimpleAdding();
-		System.out.println("Test 2 excepted 10: Result \t" + sa.simpleAdding(4) + "\nTest 2 execpted 9870: result\t"
-				+ sa.simpleAdding(140));
+		System.out.println("Test 1 \t" + sa.simpleAdding(4) + "\nTest 2\t"+ sa.simpleAdding(140));
 		LetterCapitalize lc = new LetterCapitalize();
 		System.out.println(lc.letterCapitalize("hello world"));
 		AlphabetSoup as = new AlphabetSoup();
 		System.out.println(as.alphabetSoup("coderbyte"));
+		CheckNums cn=new CheckNums();
+		System.out.println(cn.checkNums(3, 67));
+		TimeConverter tc=new TimeConverter();
+		System.out.println(tc.timeConvert(140));
+		LetterChanges letc=new LetterChanges();
+		System.out.println(letc.letterChanges("fun times!"));
+		System.out.println(letc.letterChanges("hello*3"));
 	}
 
 }
