@@ -1,17 +1,15 @@
 package coderbyte;
-
-/*
- * Challenge
-Using the Java language, have the function SimpleAdding(num) add up all the numbers from 1 to num. For example: 
-if the input is 4 then your program should return 10 because 1 + 2 + 3 + 4 = 10. For the test cases, the parameter num will 
-be any number from 1 to 1000.
-
-Sample Test Cases
-Input:12   Output:78
-Input:140 Output:9870
-*/
+import static org.junit.Assert.*;
+/**
+ * https://coderbyte.com/results/devlex:Simple%20Adding:Java
+ * @author _DELEX
+ */
 public class SimpleAdding {
-	public int simpleAdding(int num) {
+	public static void main(String[] args) {
+		assertEquals(78, simpleAdding(12));
+		assertEquals(9870, simpleAdding(140));
+	}
+	public static int simpleAdding(int num) {
 		int rep = 0;
 		while (num > 0) {
 			rep += num;

@@ -1,15 +1,15 @@
 package coderbyte;
-
+import static org.junit.Assert.*;
 /**
- * Challenge Using the Java language, have the function LetterCapitalize(str)
- * take the str parameter being passed and capitalize the first letter of each
- * word. Words will be separated by only one space. Sample Test Cases
- * Input:"hello world" Output:"Hello World" Input:"i ran there" Output:"I Ran
- * There"
+ * https://coderbyte.com/results/devlex:Letter%20Capitalize:Java
+ * @author _DELEX
  */
 
 public class LetterCapitalize {
-	public String letterCapitalize(String sen) {
+	public static void main(String[] args) {
+		assertEquals("Hello World", letterCapitalize("hello world"));
+	}
+	public static String letterCapitalize(String sen) {
 		
 		String str[] = sen.split(" ");
 		StringBuffer sb = new StringBuffer();

@@ -1,25 +1,31 @@
 package coderbyte;
 
-/*Challenge
-Using the Java language, have the function LongestWord(sen) take the sen parameter being passed and 
-return the largest word in the string. If there are two or more words that are the same length, 
-return the first word from the string with that length. Ignore punctuation and assume sen will not be empty.
+import static org.junit.Assert.assertEquals;
 
-Sample Test Cases
-Input:"fun&!! time"    Output:"time"
-Input:"I love dogs"  Output:"love
-*/
+/**
+ * https://coderbyte.com/results/devlex:Longest%20Word:Java
+ * @author _DELEX
+ */
+
 public class LongestWord {
-	public String longestWord(String sen) {
-		String s = sen.replace("/[^a-zA-Z0-9]/g", "");
-		String[] tabString = s.split(" ");
-		int n = 0;
-		for (int i = 0; i < tabString.length; i++) {
-			if (n < tabString[i].length()) {
-				n = tabString[i].length();
-				s = tabString[i];
-			}
-		}
-		return s;
+	public static void main(String[] args) {
+		String s = "time";
+		String str="love";
+		assertEquals(s, longestWord("fun&!! time"));
+		assertEquals(str, longestWord("I love dogs"));
 	}
+	public static String longestWord(String sen) { 
+	      int i=0;
+	      String s= sen.replace("/[^a-zA-Z0-9]/g","");
+	      System.out.println(s);
+			int plusLong=Integer.MIN_VALUE;
+			String [] mots=s.split(" ");
+			for(i=0;i<mots.length;i++){
+				if(mots[i].length()>plusLong){
+					sen=mots[i];
+					plusLong=mots[i].length();
+				}
+			}
+	    return sen;
+	  }
 }
